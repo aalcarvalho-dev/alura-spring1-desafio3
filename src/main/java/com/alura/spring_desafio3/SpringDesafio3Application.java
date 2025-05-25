@@ -9,10 +9,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringDesafio1Application implements CommandLineRunner{
+public class SpringDesafio3Application implements CommandLineRunner{
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringDesafio1Application.class, args);
+		SpringApplication.run(SpringDesafio3Application.class, args);
 	}
 
 	@Override
@@ -73,7 +73,7 @@ public class SpringDesafio1Application implements CommandLineRunner{
 
 		List<Integer> numerosPrimos = listaDeNumeros.stream()
                                                     .flatMap(List::stream)  // Achatar as sublistas em uma única stream
-                                                    .filter(SpringDesafio1Application::ehPrimo)  // Filtrar apenas números primos
+                                                    .filter(SpringDesafio3Application::ehPrimo)  // Filtrar apenas números primos
                                                     .sorted()               // Ordenar em ordem crescente
                                                     .collect(Collectors.toList()); // Coletar em uma lista
 
